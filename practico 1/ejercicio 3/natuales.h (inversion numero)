@@ -1,0 +1,44 @@
+#pragma once
+#include <iostream>
+#include <math.h>
+using namespace std;
+class naturales{
+private: 
+	int x;
+public:
+	
+	void set_x(int y){
+		x = y;
+	}
+	
+	int get_x(){
+		return x;
+	}
+
+	int digito(){
+		int num = x, contar= 0;
+			while(num > 0){
+				num = num/10;
+				contar++;
+			}
+		return contar;
+	}
+
+	naturales invertir(int digito){
+	naturales inv;
+	float base = 10;
+	int i = x, rest= 0, total = 0;
+
+		while(digito > 0){
+			rest = i%10;
+			i = i/10;
+			total += rest*pow(base, digito-1);
+			digito--;
+		}
+		inv.x = total;
+
+		return inv;
+	}
+
+};
+
