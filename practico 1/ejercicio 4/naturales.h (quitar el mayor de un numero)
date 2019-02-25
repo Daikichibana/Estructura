@@ -1,0 +1,77 @@
+#pragma once
+#include <iostream>
+#include <string>
+#include <math.h>
+using namespace std;
+
+class naturales{
+private:
+	int entero;
+public:
+	int get_entero(){
+		return entero;
+	}
+
+
+	void set_entero(int e){
+		entero=e;
+	}
+
+	int contar_digitos(){
+		int i = entero;
+		int contar = 0;
+			while(i>0){
+				i=i/10;
+				contar=contar + 1;
+			}
+		return contar;
+	}
+
+	void leer(){
+		cout<<"Ingrese el numero: "<<endl;
+		cin>>entero;
+	}
+	
+	void mostrar(){
+		cout<<"el resultado es: "<<entero<<endl;
+	}
+
+	int mayor(int digito){
+		int res, aux, res2, mayor=0, k;
+
+		int i = entero, j = i+1;
+			while(i>0){
+				res = i%10;
+				aux = i;
+				k=digito;
+				while(k > 0){
+					res2 = aux%10;
+					if(res >= mayor)
+						mayor = res;
+
+					aux = aux/10;
+					k--;
+				}
+				i = i/10;
+				digito--;
+			}
+			return mayor;
+	}
+
+	naturales quitar(int mayor, int digitos){
+	naturales c;
+	int i = entero, res, total=0;
+	float base = 10;
+		while(i>0){
+			res= i%10; 
+
+			if(res != mayor)
+				total += res*pow(base,digitos-1);
+
+		i= i/10;
+		digitos--;
+		}
+		c.entero = total;
+	return c;
+	}
+};
