@@ -1,0 +1,22 @@
+#include "stdafx.h"
+#include <iostream>
+#include "naturales.h"
+using namespace std;
+
+void main(){
+naturales a, res;
+int num, mat;
+
+	cout<<"ingrese el numero";
+	cin>>num;
+
+a.set_x(num);
+
+num = a.digito();
+res = a.invertir(num);
+mat = res.get_x();
+cout<<mat;
+
+system("pause");
+
+}
