@@ -74,4 +74,15 @@ public:
 		c.entero = total;
 	return c;
 	}
+
+	naturales invertir(){
+		naturales b;
+		int x=entero, result = 0;
+		while(x > 0){
+			result = result*10 + x%10;
+			x = x/10;
+		}
+		b.entero = result;
+		return b;
+	}
 };
