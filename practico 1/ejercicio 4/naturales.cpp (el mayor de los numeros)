@@ -1,0 +1,19 @@
+#include "stdafx.h"
+#include <iostream>
+#include "naturales.h"
+using namespace std;
+
+void main(){
+naturales a, b;
+int digitos, m;
+
+a.leer();
+digitos = a.contar_digitos();
+
+m = a.mayor(digitos);
+cout<<m;
+
+b = a.quitar(m, digitos);
+b.mostrar();
+system("pause");
+}
