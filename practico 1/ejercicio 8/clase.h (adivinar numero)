@@ -1,0 +1,48 @@
+#pragma once
+#include <iostream>
+using namespace std;
+
+class naturales{
+private: 
+	int x;
+public:
+	int getx(){
+		return x;
+	}
+
+	void setx (int y){
+		x = y;
+	}
+
+	void leer(){
+		cout<<"Por favor ingrese el numero: ";
+		cin>>x;
+	}
+
+	void mostrar(){
+		cout<<x;
+	}
+
+	naturales Comparar(int numa){
+		naturales resp;
+		int numero;
+		bool correcto = true;
+
+		while(correcto){
+			cout<<"Ingrese el numero: ";
+			cin>>numero;
+			if(numero == numa){
+				correcto = false;
+			} else {
+			if(numero < numa+5 && numero > numa-5){
+				cout<<"Estas cerca..."<<endl;
+			} else{
+				cout<<"Uy estas lejos!"<<endl;
+			}
+			}
+		}
+		resp.x = numero;
+		return resp;
+	}
+};
+
