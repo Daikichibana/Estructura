@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include "naturales.h"
+#include <iostream>
+#include <time.h>
+#include <stdio.h>
+using namespace std;
+
+int Aleatorio();
+
+void main(){
+int numa, resultado;
+naturales a;
+
+numa = Aleatorio();
+cout<<"(El numero aleatorio es: "<<numa<<")"<<endl;
+
+a= a.Comparar(numa);
+resultado = a.getx();
+cout<<"Felicidades has respondido correctamente! el numero era: "<<resultado<<endl;
+system("pause");
+}
+
+int Aleatorio(){
+int numero;
+	srand(time(NULL));
+	numero = 1 + rand()%((100+1) - 1);
+return numero;
+}
