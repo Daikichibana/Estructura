@@ -1,0 +1,47 @@
+#pragma once
+#include <iostream>
+using namespace std;
+class naturales{
+private:
+	int x;
+public:
+	int getx(){
+		return x;
+	}
+	void setx(int y){
+		x=y;
+	}
+
+	int invertir(int n){
+		int d, res=0;
+		while(n > 0){
+			d = n%10;
+			res =res*10 + d;
+			n /= 10;
+		}
+		return res;
+	}
+
+	naturales crapula(){
+	naturales resp;
+	int total = 0, aux = x, resto,resto2, res = 0, res2 = 0,aux2;
+	while(aux > 0){
+		resto = aux%10;
+		res = res + resto;
+		aux /= 10;
+	}
+	if (res > 10){
+	aux2 = res;
+	while(aux2 > 0){
+		resto2 = aux2%10;
+		res2 = res2 + resto2;
+		aux2 /= 10;
+	} resp.x = res2;
+	return resp;
+	} else {
+		resp.x = res;
+		return resp;
+	}
+	}
+};
+
