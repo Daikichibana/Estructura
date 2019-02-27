@@ -1,0 +1,17 @@
+#include "stdafx.h"
+#include <iostream>
+#include "naturales.h"
+using namespace std;
+
+void main(){
+int num;
+naturales a;
+
+cout<<"Digite el numero porfavor: ";
+cin>>num;
+
+a.setx(num);
+a.Automorfico();
+system("pause");
+}
+
