@@ -1,0 +1,26 @@
+#include "stdafx.h"
+#include "naturales.h"
+#include <iostream>
+#include <time.h>
+#include <stdio.h>
+using namespace std;
+
+void main(){
+int num, digito, resultado;
+naturales a;
+
+cout<<"ingrese le numero: ";
+cin>>num;
+
+cout<<"ingrese el digito: ";
+cin>>digito;
+
+a.setx(num);
+a = a.insertar(digito);
+
+resultado = a.getx();
+
+cout<<"El resultado es: "<<resultado<<endl;
+
+system("pause");
+}
