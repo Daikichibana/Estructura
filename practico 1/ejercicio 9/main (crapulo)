@@ -1,0 +1,23 @@
+#include "stdafx.h"
+#include <iostream>
+#include "naturales.h"
+using namespace std;
+
+void main(){
+int num;
+int result;
+naturales a;
+
+cout<<"Digite el numero porfavor: ";
+cin>>num;
+
+a.setx(num);
+
+
+a = a.crapula();
+result = a.getx();
+cout<<"el resultado es: "<<result<<endl;
+system("pause");
+
+}
+
