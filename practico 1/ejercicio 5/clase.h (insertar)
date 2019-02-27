@@ -1,0 +1,47 @@
+#pragma once
+#include <iostream>
+using namespace std;
+
+class naturales{
+private: 
+	int x;
+public:
+	int getx(){
+		return x;
+	}
+	void setx(int y){
+		x=y;
+	}
+
+	naturales insertar(int numero){
+	naturales resp;
+	int digito, res = 0;
+	int aux = x , aux2 = x;
+		while(aux >0){
+			digito = aux%10;
+			aux2 /= 10;
+			if(digito > numero && aux2%10 < numero){
+				res = res*10 + digito;
+				res = res*10 + numero;
+				
+			} else {  
+				res = res*10 + digito; 
+			}
+			aux /= 10;
+		}
+		res = invertir(res);
+		resp.x = res;
+		return resp;
+	}
+
+	int invertir(int n){
+		int d, res=0;
+		while(n > 0){
+			d = n%10;
+			res =res*10 + d;
+			n /= 10;
+		}
+		return res;
+	}
+};
+
