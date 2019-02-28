@@ -1,0 +1,18 @@
+#include "stdafx.h"
+#include "naturales.h"
+#include <iostream>
+using namespace std;
+
+void main(){
+int num, digito, resultado;
+naturales a;
+
+cout<<"ingrese el numero: ";
+cin>>num;
+
+a= a.planilla(num);
+resultado= a.getx();
+
+cout<<"El total a pagar es: "<<resultado<<endl;
+system("pause");
+}
