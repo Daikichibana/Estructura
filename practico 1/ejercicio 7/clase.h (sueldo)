@@ -1,0 +1,38 @@
+#pragma once
+#include <iostream>
+using namespace std;
+
+class naturales{
+private: 
+	int x;
+public:
+	int getx(){
+		return x;
+	}
+	void setx(int y){
+		x=y;
+	}
+	int sueldo(int horas){
+	naturales ans;
+	int sueldo = 0;
+		sueldo = horas*20;
+	return sueldo;
+	}
+
+	naturales planilla(int cant){
+	naturales ans, a;
+	int total = 0, horas, sueldo, i=0;
+		while(cant > 0){
+			cout<<"ingrese horas del trabajador "<<i<<": ";
+			cin>>horas;
+			sueldo = a.sueldo(horas);
+			cout<<"El sueldo a pagar es: "<<sueldo<<endl;
+			total += sueldo;
+			i++;
+			cant--;
+		}
+	ans.x = total;
+	return ans;
+	}
+};
+
