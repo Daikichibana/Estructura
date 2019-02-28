@@ -1,0 +1,19 @@
+#include "stdafx.h"
+#include "naturales.h"
+#include <iostream>
+#include <time.h>
+#include <stdio.h>
+using namespace std;
+
+void main(){
+int num, digito, resultado;
+naturales a, inv;
+
+cout<<"ingrese el numero: ";
+cin>>num;
+
+a.setx(num);
+inv = a.inverso();
+a.comparar(inv);
+system("pause");
+}
