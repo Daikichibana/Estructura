@@ -1,0 +1,36 @@
+#pragma once
+#include <iostream>
+using namespace std;
+
+class naturales{
+private: 
+	int x;
+public:
+	int getx(){
+		return x;
+	}
+	void setx(int y){
+		x=y;
+	}
+
+	naturales inverso(){
+	naturales ans;
+	int num = x, digito, total = 0;
+		while(num > 0){
+			digito = num%10;
+			total = total*10+digito;
+			num = num/10;
+		}	
+		ans.x = total;
+		return ans;
+	}
+
+	void comparar(naturales num){
+	naturales ans;
+	int original = x, numero = num.x;
+		if(original == numero)
+			cout<<"el numero es palindromo"<<endl;
+		else
+			cout<<"el numero no es palindromo"<<endl;
+	}
+};
