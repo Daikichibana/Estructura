@@ -6,6 +6,9 @@ using namespace std;
 int contardigito(int num);
 
 void main(){
+float j=6;
+cout<<setiosflags(ios::showpoint|ios::showpos)<<endl;
+cout<<(j+5)<<endl;
 /*
 float dato= 3.15373737;
 float dato1= 4.48484848;
