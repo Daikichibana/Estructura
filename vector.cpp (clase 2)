@@ -22,7 +22,7 @@ do {
 			break;
 		}
 		case 2:{
-			// if(a.Borrar()!=true){cout<<" Vector vacio"<<endl;}
+			if(a.Borrar()!=true){cout<<" Vector vacio"<<endl;}
 			break;
 		}
 		case 3:{
