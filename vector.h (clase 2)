@@ -109,4 +109,15 @@ public:
 			i++;
 		}
 	}
+	bool Borrar(){
+		int i;
+		if(vacio()==true){return false;}
+		i=0;
+		while(i<tamano){
+			vector[i]="";
+			i++;
+		}
+		tamano =0;
+		return true;
+	}
 };
