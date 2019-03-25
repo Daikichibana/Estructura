@@ -1,0 +1,67 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int contardigito(int num);
+
+void main(){
+float j=6;
+cout<<setiosflags(ios::showpoint|ios::showpos)<<endl;
+cout<<(j+5)<<endl;
+/*
+float dato= 3.15373737;
+float dato1= 4.48484848;
+cout<<setprecision(2);
+cout<<setfill('s');
+cout<<setw(6)<<dato<<endl;
+cout<<dato1<<endl;
+*/
+/*
+float dato=54321;
+float dato2=21;
+int digito1;
+int digito2;
+
+cout<<"ingrese el primer valor: ";
+cin>>dato;
+digito1= contardigito(dato);
+cout<<"Ingrese el segundo valor: ";
+cin>>dato2;
+digito2= contardigito(dato2);
+
+if(digito1 > digito2){
+cout<<setprecision(digito1);
+cout<<setfill(' ');
+cout<<setw(digito1)<<dato<<endl;
+cout<<"x";
+cout<<setw(digito1-1)<<dato2<<endl;
+} else {
+cout<<setprecision(digito2);
+cout<<setfill(' ');
+cout<<setw(digito2)<<dato<<endl;
+cout<<"x";
+cout<<setw(digito2-1)<<dato2<<endl;
+}
+*/
+
+int i=10;
+int j=15;
+
+cout<<setbase(8)<<i<<endl;
+cout<<setbase(10)<<i<<endl;
+cout<<setbase(16)<<i<<endl;
+cout<<setbase(16)<<j<<endl;
+system("pause");
+}
+
+
+int contardigito(int num){
+	int total=0, aux = num;
+	while(aux > 0){
+		aux= aux/10;
+		total++;
+	}
+	return total;
+}
