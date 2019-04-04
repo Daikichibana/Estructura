@@ -1,0 +1,25 @@
+﻿Build started 04/04/2019 10:16:17.
+     1>Project "C:\Users\usuario\Desktop\matriz visual\matriz visual\matriz visual.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\matriz visual.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+       CoreResGen:
+         No resources are out of date with respect to their source files. Skipping resource generation.
+       ResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         matriz visual.vcxproj -> C:\Users\usuario\Desktop\matriz visual\Debug\matriz visual.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\matriz visual.unsuccessfulbuild".
+         Touching "Debug\matriz visual.lastbuildstate".
+     1>Done Building Project "C:\Users\usuario\Desktop\matriz visual\matriz visual\matriz visual.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.06
