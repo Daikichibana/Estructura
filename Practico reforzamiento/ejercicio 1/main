@@ -1,0 +1,14 @@
+#include "stdafx.h"
+#include "naturales.h"
+#include <iostream>
+using namespace std;
+
+void main(){
+naturales a;
+
+a.leer();
+a= a.depurar();
+a.mostrar();
+
+system("pause");
+}
