@@ -41,7 +41,6 @@ public:
 	}
 
 	bool automorfico(){
-		bool resp = false;
 		int numero = x, aux;
 		int cuadrado = elevar(x,2);
 
