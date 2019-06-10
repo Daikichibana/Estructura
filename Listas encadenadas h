@@ -1,0 +1,107 @@
+#include "StdAfx.h"
+#include "Lista.h"
+
+Lista::Lista(void){
+	list=-1;
+	disp=0;
+	int i=0;
+	while(i<N-1){
+		lista[i].set_apuntador(i+1);
+		i++;
+	}
+	lista[i].set_apuntador(-1);
+}
+bool Lista::insertar(int pos, NODO x){
+	if(lista_llena()==true){
+		return false;
+	}else{
+		int y=Buscar_nodo();
+		lista[y]=x;
+		if(pos==-1){
+			lista[y].set_apuntador(list);
+			list=y;
+		}else{
+			lista[y].set_apuntador(Proximo(pos));
+			lista[pos].set_apuntador(y);	
+		}
+		return true;
+	}
+}
+int Lista::Buscar_nodo(){
+	int y=disp;
+	disp=lista[y].get_apuntador();
+	return y;
+}
+bool Lista::eliminar(int pos, NODO &x){
+	int p;
+	if(lista_vacia()==true){
+		return false;
+	}else{
+		if(pos==-1){
+			x=lista[list];
+			pos=list;
+			list=lista[list].get_apuntador();
+		}else{
+			if(lista[pos].get_apuntador()==-1){
+				return false;
+			}else{
+				p=lista[pos].get_apuntador();
+				x=lista[p];
+				lista[pos].set_apuntador(lista[p].get_apuntador());
+			}
+		}
+		Liberar_nodo(p);
+		return true;
+	}
+}
+void Lista::Liberar_nodo(int pos){
+	lista[pos].set_apuntador(disp);
+	disp=pos;
+}
+int Lista::Primero(){
+	return list;
+}
+int Lista::Proximo(int pos){
+	return lista[pos].get_apuntador();
+}
+int Lista::Ultimo(){
+	int j=-1;
+	int i=Primero();
+	while(i!=-1){
+		j=i;
+		i=Proximo(i);
+	}
+	return j;
+}
+int Lista::Fin_lista(){
+	return -1;
+}
+bool Lista::lista_vacia(){
+	if(list==-1) {return true;}
+	else {return false;}
+}
+bool Lista::lista_llena(){
+	if(disp==-1) {return true;}
+	else {return false;}
+}
+NODO Lista::get_lista(int p){
+	return lista[p];
+}
+void Lista::set_lista(int p, NODO x){
+	lista[p]=x;
+}
+bool Lista::Equivalente(int p, int q){
+	if(lista[p].equivalente(lista[q])==true){
+		return true;
+	}else{
+		return false;
+	}
+}
+Lista Lista::this_apuntador(){
+	return *this; 
+}
+void Lista::this_apuntador(Lista l){
+	*this=l;
+}
+
+
