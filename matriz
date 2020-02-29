@@ -1,0 +1,49 @@
+
+package listaencadenada;
+
+class Matriz 
+{
+    private int[][] m;
+    private int tamano_fila;
+    private int tamano_columna;   
+    
+    
+    Matriz(){
+        m = new int[10][10];
+        tamano_fila= 0;
+        tamano_columna= 0;
+    }
+    
+    //Metodos de Acceso//
+	int getTamanoFila()
+	{
+            return tamano_fila;
+        }
+        
+	int getTamanoColumna()
+	{
+            return tamano_columna;
+        }
+        
+	void setTamanoFila(int f)
+	{ 
+            tamano_fila=f;
+        }
+        
+	void setTamanoColumna(int c)
+	{ 
+            tamano_columna=c;
+        }
+        
+	int getMatriz(int f,int c)
+	{ 
+            return m[f][c];
+        }
+        
+	void setMatriz(int f, int c, int x)
+	{
+            m[f][c]=x;
+        }
+
+        
+}
